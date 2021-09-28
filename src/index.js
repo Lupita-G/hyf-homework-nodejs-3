@@ -12,7 +12,7 @@ app.get('/users', function (req, res){
 });
 
 app.post('/user', function(req, res) {
-    res.send([]);
+    res.send({id:0});
 });
 
 app.get('/users/:id', function(req, res){
