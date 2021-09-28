@@ -1,5 +1,4 @@
 const express = require ('express');
-
 const app = express();
 
 app.get('/', function (req, res){
@@ -7,15 +6,19 @@ app.get('/', function (req, res){
 
 });
 
-app.get('/users', function(req, res){
-    res.send({id:0});
+app.get('/users', (req, res)=> {
+    res.send([]);
 });
 
 app.post('/user', function(req, res) {
+    res.send({ id: 0});
+});
+
+app.get('/users', function(req, res){
     res.send([{ id: 0}]);
 });
 
-app.get('/user/:id', function(req, res){
+app.get('/user/0', function(req, res){
     res.send({ id: 0});
 });
 
