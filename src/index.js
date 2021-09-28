@@ -12,11 +12,11 @@ app.get('/users', function (req, res){
 });
 
 app.post('/user', function(req, res) {
-    res.send([{id:0}]);
+    res.send([{ id: 0}]);
 });
 
 app.get('/user/:id', function(req, res){
-    res.send([{id:0}]);
+    res.send({ id: 0});
 });
 
 app.listen(3000, function(){
