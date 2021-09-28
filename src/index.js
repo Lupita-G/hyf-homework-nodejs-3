@@ -7,8 +7,8 @@ app.get('/', function (req, res){
 
 });
 
-app.get('/users', function (req, res){
-    res.send([]);
+app.get('/users', function(req, res){
+    res.send({id:0});
 });
 
 app.post('/user', function(req, res) {
