@@ -3,8 +3,7 @@ const express = require ('express');
 const app = express();
 
 let users = [];
-let removed = users.splice(0, 1);
-let index = users.indexOf({id: Number(req.params.id)});
+
 
 app.get('/', function (req, res){
     res.send('Hello World!'); 
@@ -30,13 +29,13 @@ app.get('/user/:id', function(req, res){
 });
  
 app.delete('/user/:id', function(req, res){
-    users.indexOf({id: Number(req.params.id)});
+    let index = users.indexOf(Number(req.params.id)); 
 
     if(index < 0){
-        res.status(204)
-    } else {
-        res.status(200)
-        
+        res.sendStatus(204)
+    } else { 
+        users.splice(index, 1);
+        res.status(202).json({id: Number(req.params.id)});    
     }
 });
 
