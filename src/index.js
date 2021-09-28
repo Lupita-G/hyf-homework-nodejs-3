@@ -11,6 +11,14 @@ app.get('/users', (req, res) =>{
     res.send([]);
 });
 
+app.post('/users', (req, res) =>{
+    res.send([]);
+});
+
+app.get('/users/:id', (req, res) =>{
+    res.send([]);
+});
+
 app.listen(3000, function(){
     console.log('listening on port 3000');
 })
