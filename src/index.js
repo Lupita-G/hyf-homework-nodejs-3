@@ -7,16 +7,16 @@ app.get('/', function (req, res){
 
 });
 
-app.get('/users', (req, res) =>{
+app.get('/users', function (req, res){
     res.send([]);
 });
 
-app.post('/users', (req, res) =>{
+app.post('/user', function(req, res) {
     res.send([]);
 });
 
-app.get('/users/:id', (req, res) =>{
-    res.send([]);
+app.get('/users/:id', function(req, res){
+    res.send({id:0});
 });
 
 app.listen(3000, function(){
